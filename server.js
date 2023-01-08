@@ -17,11 +17,16 @@ io.on("connection", (socket) => {
   io.emit("user connected", "another user connected");
 
   socket.on("chat message", (msg) => {
-    io.emit("chat message", msg);
+    // send to all users without the user that send the message
+    socket.broadcast.emit("chat message", msg);
+  });
+
+  socket.on("typing", (msg) => {
+    socket.broadcast.emit("typing", msg);
   });
 
   socket.on("disconnect", () => {
-    console.log("user disconnected");
+    io.emit("user disconnected", "another user disconnected");
   });
 });
 
