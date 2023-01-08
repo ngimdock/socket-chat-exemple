@@ -1,0 +1,16 @@
+{
+  "name": "ngimdock-socket-chat-exemple",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "https://github.com/ngimdock/socket-chat-exemple.git",
+  "author": "ngimdock <ngimdockzemfack@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
