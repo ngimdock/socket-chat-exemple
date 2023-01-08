@@ -1,9 +1,12 @@
 import express from "express";
+import path from "path";
 
 const app = express();
 
 app.get("/", (req, res) => {
-  res.json({ message: "Hello World!" });
+  res.sendFile(
+    "/home/ngimdock/Documents/projets/traveaux/express/socket-chat-exemple/index.html"
+  );
 });
 
 const PORT = 3000;
